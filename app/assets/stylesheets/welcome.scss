@@ -1,0 +1,441 @@
+// Place all the styles related to the welcome controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+/*  COLORS  */
+/*$about_bg_color: rgba(0,0,0,0.05); very light gray*/
+$about_bg_color: #435a6b; /*grayish-blue*/
+/*$projects_bg_color: #545DD9; sublime purple font */
+$projects_bg_color: #0e83cd; /*bright, lightish blue*/
+$header_tagline_color: rgb(252, 240, 182);
+
+
+/*  EXAMPLE STYLES */
+.debug {
+  border: 1px dotted red;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.section-content-wrapper{
+  text-align: center;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* ============================================================
+  NAV BAR
+============================================================ */
+nav {
+  background-color: #252525;
+  opacity: 0.6;
+  border: 1px solid #dedede;
+  border-radius: 14px;
+  box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.055);
+  color: #888;
+  display: block;
+  margin: 1em 5em;
+  overflow: hidden;
+}
+nav ul {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+nav ul li {
+  display: inline-block;
+  list-style-type: none;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+}
+nav > ul > li > a {
+  color: #aaa;
+  display: block;
+  line-height: 56px;
+  padding: 0 24px;
+  text-decoration: none;
+}
+nav > ul > li:hover {
+  background-color: rgb( 40, 44, 47 );
+}
+nav > ul > li:hover > a {
+  color: rgb( 255, 255, 255 );
+}
+nav > ul > li:hover > a > .caret {
+  border-top-color: rgb( 255, 255, 255 );
+}
+
+
+/* ============================================================
+  SECTIONS -- ABOUT
+============================================================ */
+#about{
+  background-color: $about_bg_color;
+  padding: 1% 3%;
+}
+
+#about .parallax{
+  border-radius: 2em;
+}
+
+span.first-letter{
+  font-size: 1.7em;
+}
+
+#about header h2{
+  /*border-top: 1px solid $header_tagline_color;*/
+  font-size: inherit;
+}
+
+span.header-tagline{
+  /*font-family: 'Ceviche One', cursive;*/
+  /*font-family: 'Permanent Marker', cursive;*/
+  font-family: 'Nothing You Could Do', cursive;
+  font-size: 40px;
+  color: $header_tagline_color;
+}
+
+.text-box{
+  border: 1px solid blue;
+}
+
+#bobs-image{
+  width: 100%;
+  max-width: 400px;
+}
+
+.center{
+  text-align: center;
+}
+
+.social-links li{
+  display: inline-block;
+  font-size: 28px;
+  padding: 0px 10px;
+}
+
+.emoji{
+  max-width: 24px;
+}
+
+/* ============================================================
+  SECTIONS -- PROJECTS
+============================================================ */
+#projects{
+  background-color: $projects_bg_color;
+  padding: 2% 3%;
+}
+
+#projects .parallax{
+  border-radius: 2em;
+}
+
+#projects h2{
+  font-family: 'Cabin Sketch', cursive;
+  font-size: 4em;
+}
+
+@media all and (min-width: 650px) {
+  #projects h2 {
+    font-size: 8em;
+  }
+}
+
+/* ============================================================
+  PARALLAX FOR SECTIONS
+  http://callmenick.com/post/simple-parallax-scrolling-effect
+============================================================ */
+.module:last-child {
+  margin-bottom: 0;
+}
+.module h2 {
+  margin-bottom: 40px;
+  font-family: "Roboto Slab", serif;
+  font-size: 30px;
+}
+.module p {
+  margin-bottom: 40px;
+  font-size: 16px;
+  font-weight: 300;
+}
+.module p:last-child {
+  margin-bottom: 0;
+}
+.module.content {
+  padding: 40px 0;
+}
+.module.parallax {
+  height: 600px;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+.module.parallax h1 {
+  font-family: 'Amatic SC', cursive;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 3em;
+  font-weight: 700;
+  text-align: center;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.module.parallax h2 {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 5em;
+  font-weight: 700;
+  text-align: center;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.module.parallax-1 {
+  background-image: image-url("kvalvika_beach_1600x600.jpg");
+}
+.module.parallax-2 {
+  background-image: image-url("programming_1600x600.jpg");
+}
+.module.parallax-3 {
+  background-image: image-url("photography_1600x600.jpg");
+}
+
+@media all and (min-width: 600px) {
+  .module h2 {
+    font-size: 42px;
+  }
+  .module p {
+    font-size: 20px;
+  }
+  .module.parallax h1 {
+    font-size: 4.5em;
+  }
+}
+@media all and (min-width: 960px) {
+  .module.parallax h1 {
+    font-size: 6em;
+  }
+
+}
+
+/*---------------------------------*/
+/***** HOVER EFFECTS -- COMMON *****/
+/*---------------------------------*/
+
+.hover {
+  position: relative;
+  clear: both;
+  margin: 0 auto;
+  /*padding: 1em 0 4em;*/
+  max-width: 500px;
+  list-style: none;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Common style */
+.hover figure {
+  position: relative;
+  float: left;
+  overflow: hidden;
+/*  margin: 10px 1%;
+  min-width: 320px;
+  max-width: 480px;
+  max-height: 360px;
+  width: 48%;
+  height: auto;
+  background: #3085a3;
+  text-align: center;
+  cursor: pointer;*/
+}
+
+.hover figure img {
+  position: relative;
+  display: block;
+  min-height: 100%;
+  max-width: 100%;
+  opacity: 0.8;
+}
+
+.hover figure figcaption {
+  padding: 0.5em 1em;
+  color: #fff;
+  /*text-transform: uppercase;*/
+  /*font-size: 1.25em;*/
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+.hover figure figcaption::before,
+.hover figure figcaption::after {
+  pointer-events: none;
+}
+
+.hover figure figcaption,
+.hover figure figcaption > a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Anchor will cover the whole item by default */
+/* For some effects it will show as a button */
+.hover figure figcaption > a {
+  z-index: 1000;
+  text-indent: 200%;
+  white-space: nowrap;
+  font-size: 0;
+  opacity: 0;
+}
+
+.hover figure h3 {
+  /*word-spacing: -0.15em;*/
+  font-weight: 300;
+}
+
+.hover figure h2 span {
+  font-weight: 800;
+}
+
+.hover figure h3,
+.hover figure p {
+  margin: 0;
+}
+
+.hover figure p {
+  letter-spacing: 1px;
+  font-size: 68.5%;
+}
+
+
+/*-------------------------------*/
+/***** HOVER EFFECTS -- Lexi *****/
+/*-------------------------------*/
+
+figure.effect-lexi {
+/*  background: -webkit-linear-gradient(-45deg, #000 0%,#fff 100%);
+  background: linear-gradient(-45deg, #000 0%,#fff 100%);*/
+  background: #000;
+  text-align: center;
+}
+
+figure.effect-lexi img {
+  margin: -10px 0 0 -10px;
+  width: -webkit-calc(100% + 10px);
+  width: calc(100% + 10px);
+  max-width: 500px;
+  opacity: 0.9;
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  -webkit-transform: translate3d(10px,10px,0);
+  transform: translate3d(10px,10px,0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+figure.effect-lexi figcaption::before,
+figure.effect-lexi p {
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+}
+
+figure.effect-lexi figcaption::before {
+  position: absolute;
+  right: -100px;
+  bottom: -100px;
+  width: 250px;
+  height: 220px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 0 900px rgba(255,255,255,0.2);
+  content: '';
+  opacity: 0;
+  -webkit-transform: scale3d(0.5,0.5,1);
+  transform: scale3d(0.5,0.5,1);
+  -webkit-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+}
+
+figure.effect-lexi:hover img {
+  opacity: 0.6;
+  -webkit-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0);
+}
+
+figure.effect-lexi h3 {
+  position: relative;
+  top: 50%;
+  color: #F056E3;
+  text-shadow: 0px 1px 10px rgba(0, 0, 0, 3.2);
+  font-family: 'Lobster', cursive;
+  text-align: center;
+  font-size: 36px;
+  -webkit-transition: -webkit-transform 0.35s;
+  transition: transform 0.35s;
+/*  -webkit-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0);*/
+  transform: scale3d(1,1,1) translateY(-50%);
+  transform-origin: -20% -10%;
+}
+
+figure.effect-lexi p {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  padding: 1em;
+  width: 140px;
+  text-align: right;
+  opacity: 0;
+  -webkit-transform: translate3d(20px,20px,0);
+  transform: translate3d(20px,20px,0);
+}
+
+figure.effect-lexi:hover figcaption::before {
+  opacity: 1;
+  -webkit-transform: scale3d(1,1,1);
+  transform: scale3d(1,1,1);
+}
+
+figure.effect-lexi:hover h3{
+  /*font-size: 24px;*/
+  opacity: 1;
+  transform: scale3d(0.8,0.8,1) translateY(-100%);
+/*  -webkit-transform: translate3d(20px,20px,0);
+  transform: translate3d(20px,20px,0);*/
+}
+
+figure.effect-lexi:hover p {
+  opacity: 1;
+  -webkit-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0);
+}
+
+figure.effect-lexi a{
+  color: #fff;
+  display: block;
+  line-height: 1.8em;
+  text-decoration: none;
+  text-align: right;
+  font-size: 1.4em;
+}
+
+figure.effect-lexi a:hover{
+  color: #eee;
+  font-weight: bold;
+}

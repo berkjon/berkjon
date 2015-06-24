@@ -12,7 +12,8 @@
  *
  *= require reset
  *= require responsive.gs.12col
- *= require font-awesome.min
  *= require_tree .
  *= require_self
  */
+
+
