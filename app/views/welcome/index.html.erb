@@ -4,67 +4,35 @@
 
         <section class="row" id="about">
           <header role="banner" class="row module parallax parallax-1 debug">
-            <div class="section-content-wrapper">
+            <div class="header-wrapper">
               <h1></h1>
               <h2><span class="header-tagline"></span></h2>
 
               <ul class="diamond-grid">
-                <li>
-                  <a href="https://www.linkedin.com/in/jonberk" title="LinkedIn" target="_blank" class="diamond">
-                    <div class="text">
-                      <i class="fa fa-linkedin-square"></i>
-                    </div>
-                  </a>
-                </li>
-                <li>
-                  <a href="https://www.facebook.com/jonberk" title="Facebook" target="_blank" class="diamond">
-                    <div class="text">
-                      <i class="fa fa-facebook-square"></i>
-                    </div>
-                  </a>
-                </li>
-                <li>
-                  <a href="https://twitter.com/berkjon" title="Twitter" target="_blank" class="diamond">
-                    <div class="text">
-                      <i class="fa fa-twitter-square"></i>
-                    </div>
-                  </a>
-                </li>
-                <li>
-                  <a href="http://open.spotify.com/user/1230827052" target="_blank" class="diamond">
-                    <div class="text">
-                      <i class="fa fa-spotify"></i>
-                    </div>
-                  </a>
-                </li>
-                <li>
-                  <a href="#" target="_blank" class="diamond">
-                    <div class="text">
-                      <i class="fa fa-picture-o"></i>
-                    </div>
-                  </a>
-                </li>
-                <li>
-                  <a href="#" title="Github" target="_blank" class="diamond">
-                    <div class="text">
-                      <i class="fa fa-github-square"></i>
-                    </div>
-                  </a>
-                </li>
-                <li>
-                  <a href="https://angel.co/jonberk" target="_blank" class="diamond">
-                    <div class="text">
-                      <i class="fa fa-angellist"></i>
-                    </div>
-                  </a>
-                </li>
-                <li>
-                  <a href="https://www.goodreads.com/jonberk" title="Goodreads" target="_blank" class="diamond">
-                    <div class="text">
-                      <i class="fa fa-book"></i>
-                    </div>
-                  </a>
-                </li>
+                <li><a href="https://www.linkedin.com/in/jonberk" title="LinkedIn" target="_blank" class="diamond">
+                  <div class="diamond-text"><i class="fa fa-linkedin-square"></i></div>
+                </a></li>
+                <li><a href="https://www.facebook.com/jonberk" title="Facebook" target="_blank" class="diamond">
+                  <div class="diamond-text"><i class="fa fa-facebook-square"></i></div>
+                </a></li>
+                <li><a href="https://twitter.com/berkjon" title="Twitter" target="_blank" class="diamond">
+                  <div class="diamond-text"><i class="fa fa-twitter-square"></i></div>
+                </a></li>
+                <li><a href="https://github.com/berkjon" title="Github" target="_blank" class="diamond">
+                  <div class="diamond-text"><i class="fa fa-github-square"></i></div>
+                </a></li>
+                <li><a href="https://angel.co/jonberk" target="_blank" class="diamond">
+                  <div class="diamond-text"><i class="fa fa-angellist"></i></div>
+                </a></li>
+                <li><a href="https://500px.com/berk" title="500px" target="_blank" class="diamond">
+                  <div class="diamond-text"><i class="fa fa-picture-o"></i></div>
+                </a></li>
+                <li><a href="https://www.goodreads.com/jonberk" title="Goodreads" target="_blank" class="diamond">
+                  <div class="diamond-text"><i class="fa fa-book"></i></div>
+                </a></li>
+                <li><a href="http://open.spotify.com/user/1230827052" title="Spotify" target="_blank" class="diamond">
+                  <div class="diamond-text"><i class="fa fa-spotify"></i></div>
+                </a></li>
               </ul>
 
               <nav role="navigation" class="row">
@@ -109,48 +77,79 @@
 
         <section class="row" id="projects">
           <div class="row module parallax parallax-2">
-            <div class="section-content-wrapper">
+            <div class="vertical-center">
               <h2>PROJECTS</h2>
             </div>
           </div>
 
-          <div class="module content debug">
+          <div class="module content">
 
             <!-- BRING HOME TO MOM  -->
-            <div class="row gutters">
-              <div class="col span_4 debug">
-                <div class="hover debug">
-                  <figure class="effect-lexi">
-                    <img src="/assets/bhtm-screenshot.png" alt="Bring Home To Mom"/>
-                    <figcaption>
-                      <h3 class="project-title">Bring Home <span>To Mom</span></h3>
-                      <p>
-                        <a href="http://bringhometomom.herokuapp.com/">Live <i class="fa fa-external-link"></i></a>
-                        <a href="https://github.com/berkjon/bring-home-to-mom">GitHub <i class="fa fa-github-alt"></i></a>
-                      </p>
-                    </figcaption>
-                  </figure>
+            <div class="project-content" id="bhtm">
+              <div class="mobile-project-header">
+                <h3>Bring Home To Mom</h3>
+                <hr class="flared-edges"><br/>
+              </div>
+              <div class="mobile-project-links">
+                <nav class="project-links">
+                  <a href="https://github.com/berkjon/bring-home-to-mom" target="_blank">GitHub</a>
+                  <a href="http://bringhometomom.herokuapp.com/" target="_blank">Live</a>
+                </nav>
+              </div>
+              <div class="project-details">
+                <div class="vertical-center">
+                  <h3>Bring Home<br/> To Mom</h3>
+                  <hr class="flared-edges"><br/>
+                  <p><em>Overview:</em> Bring Home To Mom is a match-making and date-planning app targeted to parents. Parents create profiles for their children, browse and filter for potential matches, plan dates while communicating with the other child's parents, and split the cost of the upcoming date so everything is prepaid.</p>
+                  <p><em>Technology:</em> Ruby on Rails and PostgreSQL on the back end, and a mix of JavaScript, jQuery, AJAX, and handlebars.js on the front-end to deliver a single-page experience across much of the site.  API integrations include Stripe for payments, Twilio for MMS notifications, Cloudinary for images, and Rotten Tomatoes and OMDB for local movie listings.
+                  <p><em>Background:</em> This was my final project at Dev Bootcamp.  I conceived and pitched the idea, and led a team of four to create the feature-rich product in exactly one week. </p>
+                  <p><em>Co-creators:</em> Sophie Garden, Tony Mai, Kevin Ceballos.  Created April 2015.</p>
+                  <nav class="project-links">
+                    <a href="https://github.com/berkjon/bring-home-to-mom" target="_blank">GitHub</a>
+                    <a href="http://bringhometomom.herokuapp.com/" target="_blank">Live</a>
+                  </nav>
                 </div>
               </div>
-              <div class="col span_8 debug">
-                Description goes here
+            </div>
+
+            <!-- SHELFWORM  -->
+            <div class="project-content" id="shelfworm">
+              <div class="mobile-project-header">
+                <h3>Shelfworm</h3>
+                <hr class="flared-edges"><br/>
+              </div>
+              <div class="mobile-project-links">
+                <nav class="project-links">
+                  <a href="https://github.com/berkjon/shelfworm" target="_blank">GitHub</a>
+                  <a href="www.shelfworm.com" target="_blank">Live</a>
+                </nav>
+              </div>
+              <div class="project-details">
+                <div class="vertical-center">
+                  <h3>Shelfworm</h3>
+                  <hr class="flared-edges"><br/>
+                  <p><em>Overview:</em> Shelfworm is a virtual bookshelf.  Users sign in with their Goodreads account, and Shelfworm automatically creates a neatly stylized page of all books that user has read, sorted by rating. Cover art is imported automatically, and on mouse hover, the cover flips over to reveal additional details including the user's rating and review.</p>
+                  <p><em>Technology:</em> Ruby, Sinatra and PostgreSQL on back end.  JavaScript & AJAX to deliver 'infinite scroll' functionality for large bookshelves.  Hover effects with CSS.  API and OAuth integration with Goodreads; cover images sourced from Goodreads, Open Library and LibraryThing.
+                  <p><em>Background:</em> This was a solo project I started at Dev Bootcamp and continued to develop after graduating.</p>
+                  <nav class="project-links">
+                    <a href="https://github.com/berkjon/shelfworm" target="_blank">GitHub</a>
+                    <a href="www.shelfworm.com" target="_blank">Live</a>
+                  </nav>
+                </div>
               </div>
             </div>
-          </div>
-
-          <!-- SHELFWORM  -->
 
         </section>
 
         <section class="row" id="photography">
           <div class="row module parallax parallax-3">
-            <div class="section-content-wrapper">
+            <div class="vertical-center">
               <h2>PHOTOGRAPHY</h2>
             </div>
           </div>
 
           <div class="row module content">
-            Photography content
+            <p>Photography stuff</p>
           </div>
         </section>
 

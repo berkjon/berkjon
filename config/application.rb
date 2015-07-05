@@ -34,5 +34,8 @@ module Berkjon
 
     # Include Bower components in compiled assets
     config.assets.paths << Rails.root.join('vendor', 'assets', 'bower_components')
+
+    # Include custom downloaded fonts (non-Google)
+    config.assets.paths << Rails.root.join('/app/assets/fonts')
   end
 end

@@ -8,9 +8,49 @@ $about_bg_color: #435a6b; /*grayish-blue*/
 /*$projects_bg_color: #545DD9; sublime purple font */
 $projects_bg_color: #0e83cd; /*bright, lightish blue*/
 $header_tagline_color: rgb(252, 240, 182);
+$nav_background_color: #252525;
+$nav_border_color: #dedede;
+$nav_font_color: #888;
+$link_hover_color: #3cddb9;
+$section_divider_border_color: rgb(96, 123, 145);
+$bhtm_bg_color: #501A3E;
+$bhtm_font_color: rgba(167, 16, 119, 1);
+/*$bhtm_font_color: rgba(250, 240, 248, 1);*/
+$bhtm_details_bg_color: rgba(250, 240, 248, 0.9);
+/*$bhtm_details_bg_color: rgba(157, 94, 137, 0.9);*/
+$shelfworm_bg_color: rgba(255, 241, 196, 1);
+$shelfworm_font_color: rgba(120, 192, 168, 1);
+$shelfworm_details_bg_color: rgba(94, 65, 47, 0.9);
 
 
-/*  EXAMPLE STYLES */
+/* FONTS */
+@font-face {
+    font-family: 'Salome';
+    src: font-url('Salome.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'GoodDelicate';
+    src: font-url('GoodDelicate.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Glamor';
+    src: font-url('Glamor-Regular.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Glamor';
+    src: font-url('Glamor-Bold.otf');
+    font-weight: bold;
+    font-style: normal;
+}
+
+
+/*  GLOBAL STYLES */
 .debug {
   border: 1px dotted red;
 }
@@ -27,33 +67,69 @@ body {
   box-sizing: inherit;
 }
 
-.section-content-wrapper{
+p{
+  margin-bottom: 20px;
+}
+
+em{
+  font-weight: bold;
+}
+
+.header-wrapper{
   text-align: center;
   position: relative;
   top: 5%;
   /*transform: translateY(-50%);*/
 }
 
+.vertical-center{
+  text-align: center;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+
+/* HORIZONTAL DIVIDERS */
+hr.flared-edges {
+  height: 30px;
+  border-style: solid;
+  border-color: black;
+  border-width: 1px 0 0 0;
+  border-radius: 20px;
+}
+hr.flared-edges::before {
+  display: block;
+  content: "";
+  height: 30px;
+  margin-top: -31px;
+  border-style: solid;
+  border-color: inherit;
+  border-width: 0 0 1px 0;
+  border-radius: 20px;
+}
+
+
 /* ============================================================
   NAV BAR
 ============================================================ */
-nav {
-  background-color: #252525;
+header nav {
+  background-color: $nav_background_color;
   opacity: 0.6;
-  border: 1px solid #dedede;
+  border: 1px solid $nav_border_color;
   /*border-radius: 14px;*/
   box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.055);
-  color: #888;
+  color: $nav_font_color;
   display: block;
   /*margin: 1em 5em;*/
   overflow: hidden;
 }
-nav ul {
+header nav ul {
   margin: 0;
   padding: 0;
   text-align: center;
 }
-nav ul li {
+header nav ul li {
   display: inline-block;
   list-style-type: none;
   -webkit-transition: all 0.2s;
@@ -62,20 +138,20 @@ nav ul li {
   -o-transition: all 0.2s;
   transition: all 0.2s;
 }
-nav > ul > li > a {
+header nav > ul > li > a {
   color: #aaa;
   display: block;
   line-height: 56px;
   padding: 0 24px;
   text-decoration: none;
 }
-nav > ul > li:hover {
+header nav > ul > li:hover {
   background-color: rgb( 40, 44, 47 );
 }
-nav > ul > li:hover > a {
+header nav > ul > li:hover > a {
   color: rgb( 255, 255, 255 );
 }
-nav > ul > li:hover > a > .caret {
+header nav > ul > li:hover > a > .caret {
   border-top-color: rgb( 255, 255, 255 );
 }
 
@@ -99,22 +175,22 @@ nav > ul > li:hover > a > .caret {
 }
 
 ul.diamond-grid li {
-    list-style: none;
+    /*list-style: none;*/
     float: left;
     margin-left: 32px;
-    margin-top: 0px;
 }
 
 .diamond {
     height: 80px;
     width: 80px;
-    background: transparent;
-    color: #fff;
+    background: $nav_background_color;
+    opacity: 0.4;
+    color: $nav_font_color;
     display: block;
     overflow: hidden;
     position: relative;
     text-decoration: none;
-    border: 3px solid #fff;
+    border: 3px solid $nav_border_color;
     -webkit-transform: rotate(45deg);
     -moz-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
@@ -126,7 +202,7 @@ ul.diamond-grid li {
     transition: color .35s linear;
 }
 
-.diamond-grid .text {
+.diamond-text {
     height: 80px;
     width: 80px;
     font-size: 44px;
@@ -148,8 +224,9 @@ ul.diamond-grid li {
     margin-top: -27px;
 }
 .diamond:hover {
-    background: #fff;
-    color: #3cddb9;
+    opacity: 0.9;
+    color: $link_hover_color;
+    border-color: $link_hover_color;
 }
 
 /* ============================================================
@@ -209,11 +286,9 @@ span.header-tagline{
 ============================================================ */
 #projects{
   background-color: $projects_bg_color;
-  padding: 2% 3%;
 }
 
 #projects .parallax{
-  border-radius: 2em;
 }
 
 #projects h2{
@@ -228,6 +303,194 @@ span.header-tagline{
 }
 
 /* ============================================================
+  PROJECT SECTIONS
+============================================================ */
+.project-content{
+  height: 100vh;
+  background-size: auto 50%;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  position: relative;
+  transition: 1s ease-in-out;
+}
+
+.project-details{
+  display: none;
+}
+
+.project-details p{
+  font-size: 12px;
+  margin-bottom: 20px;
+}
+
+#bhtm{
+  background-image: image-url("bhtm-laptop-border.png");
+  background-color: $bhtm_bg_color;
+  color: $bhtm_font_color;
+}
+
+#bhtm .project-details{
+  background-color: $bhtm_details_bg_color;
+}
+
+#bhtm hr{
+  border-color: $bhtm_bg_color;
+}
+
+#bhtm .project-links a::before, #bhtm .project-links a::after{
+  background: $bhtm_bg_color;
+}
+
+#bhtm .mobile-project-header, #bhtm .mobile-project-header hr, #bhtm .mobile-project-links{
+  color: $bhtm_details_bg_color;
+  border-color: $bhtm_details_bg_color;
+}
+
+#bhtm .mobile-project-links a::before, #bhtm .mobile-project-links a::after{
+  background: $bhtm_font_color;
+}
+
+
+
+#shelfworm{
+  background-image: image-url("shelfworm-laptop-border.png");
+  background-color: $shelfworm_bg_color;
+  /*color: $shelfworm_font_color;*/
+  color: $shelfworm_font_color;
+}
+
+#shelfworm .project-details{
+  /*background-color: $shelfworm_details_bg_color;*/
+  background-color: $shelfworm_details_bg_color;
+}
+
+#shelfworm hr{
+  border-color: $shelfworm_bg_color;
+}
+
+#shelfworm .project-links a::before, #shelfworm .project-links a::after{
+  background: $shelfworm_bg_color;
+}
+
+#shelfworm .mobile-project-header, #shelfworm .mobile-project-header hr, #shelfworm .mobile-project-links{
+  color: $shelfworm_details_bg_color;
+  border-color: $shelfworm_details_bg_color;
+}
+
+#shelfworm .mobile-project-links a::before, #shelfworm .mobile-project-links a::after{
+  background: $shelfworm_font_color;
+}
+
+.project-content h3{
+  font-family: "Salome", serif;
+  font-size: 48px;
+  text-align: center;
+}
+
+.mobile-project-header{
+  position: absolute;
+  top: 7%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  padding: 0% 6%;
+}
+
+
+
+.mobile-project-links{
+  position: absolute;
+  bottom: 5%;
+  width: 400px;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.project-links{
+  position: relative;
+  text-align: center;
+}
+
+.project-links a {
+  color: inherit;
+  text-shadow: none;
+  font-weight: 700;
+  position: relative;
+  display: inline-block;
+  margin: 15px 25px;
+  padding: 12px 10px 10px;
+  outline: none;
+  text-decoration: none;
+  letter-spacing: 1px;
+  font-size: 1.35em;
+}
+
+.project-links a::before,
+.project-links a::after {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: white;
+  content: '';
+  -webkit-transition: -webkit-transform 0.3s;
+  -moz-transition: -moz-transform 0.3s;
+  transition: transform 0.3s;
+  -webkit-transform: scale(0.85);
+  -moz-transform: scale(0.85);
+  transform: scale(0.85);
+}
+
+.project-links a::after {
+  opacity: 0;
+  -webkit-transition: top 0.3s, opacity 0.3s, -webkit-transform 0.3s;
+  -moz-transition: top 0.3s, opacity 0.3s, -moz-transform 0.3s;
+  transition: top 0.3s, opacity 0.3s, transform 0.3s;
+}
+
+.project-links a:hover::before,
+.project-links a:hover::after,
+.project-links a:focus::before,
+.project-links a:focus::after {
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  transform: scale(1);
+}
+
+.project-links a:hover::after,
+.project-links a:focus::after {
+  top: 0%;
+  opacity: 1;
+}
+
+
+
+@media all and (min-width: 768px) {
+  .project-content {
+    background-size: 70%;
+    background-attachment: fixed;
+  }
+
+  .project-details{
+    width: 50%;
+    float: right;
+    padding: 6%;
+    height: 100%;
+    min-height: 100%;
+    position: relative;
+    display: inherit;
+    overflow: auto;
+  }
+
+  .mobile-project-header, .mobile-project-links{
+    display: none;
+  }
+}
+
+
+/* ============================================================
   PARALLAX FOR SECTIONS
   http://callmenick.com/post/simple-parallax-scrolling-effect
 ============================================================ */
@@ -240,7 +503,6 @@ span.header-tagline{
   font-size: 30px;
 }
 .module p {
-  margin-bottom: 40px;
   font-size: 16px;
   font-weight: 300;
 }
@@ -248,14 +510,16 @@ span.header-tagline{
   margin-bottom: 0;
 }
 .module.content {
-  padding: 40px 0;
+  /*padding: 40px 0;*/
 }
 .module.parallax {
-  height: 100vh;
+  /*height: 100vh;*/
   background-position: 50% 50%;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
+  border-top: 16px solid $section_divider_border_color;
+  border-bottom: 16px solid $section_divider_border_color;
 }
 .module.parallax h1 {
   font-family: 'Amatic SC', cursive;
@@ -274,12 +538,15 @@ span.header-tagline{
 }
 .module.parallax-1 {
   background-image: image-url("kvalvika_beach_1mb.jpg");
+  height: 100vh;
 }
 .module.parallax-2 {
   background-image: image-url("programming_1600x600.jpg");
+  height: 300px;
 }
 .module.parallax-3 {
   background-image: image-url("photography_1600x600.jpg");
+  height: 300px;
 }
 
 @media all and (min-width: 600px) {
@@ -292,12 +559,14 @@ span.header-tagline{
   .module.parallax h1 {
     font-size: 4.5em;
   }
+  .project-details p{
+    font-size: 16px;
+  }
 }
 @media all and (min-width: 960px) {
   .module.parallax h1 {
     font-size: 6em;
   }
-
 }
 
 /*---------------------------------*/
