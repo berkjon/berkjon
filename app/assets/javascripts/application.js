@@ -17,6 +17,8 @@
 //= require ScrollMagic/scrollmagic/uncompressed/ScrollMagic
 //= require ScrollMagic/scrollmagic/minified/plugins/debug.addIndicators.min
 
+//= require slick.js/slick/slick.min
+
 
   // init controller
   var controller = new ScrollMagic.Controller();
@@ -50,3 +52,16 @@
 //     }
 //   });
 // });
+
+//SLICK CAROUSEL:
+$(document).ready(function(){
+  $('.photo-carousel').slick({
+    arrows: true,
+    autoplay: true,
+    // dots: true,
+    // adaptiveHeight: true,
+    autoplaySpeed: 6000,
+    speed: 1000,
+    accessibility: true,
+  });
+});

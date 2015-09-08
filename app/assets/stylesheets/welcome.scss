@@ -24,6 +24,7 @@ $ninety8problems_details_bg_color: rgba(23, 23, 23, 0.9);
 $shelfworm_bg_color: rgba(255, 241, 196, 1);
 $shelfworm_font_color: rgba(196, 252, 255, 1);
 $shelfworm_details_bg_color: rgba(94, 65, 47, 0.95);
+$photography_bg_color: rgb(214, 215, 224);
 
 
 
@@ -273,6 +274,7 @@ span.header-tagline{
 
 .center{
   text-align: center;
+  margin: 0 auto;
 }
 
 .social-links li{
@@ -518,6 +520,40 @@ span.header-tagline{
   .mobile-project-header, .mobile-project-links{
     display: none;
   }
+}
+
+
+/* ============================================================
+  PHOTOGRAPHY
+============================================================ */
+.photography-content{
+  background-color: $photography_bg_color;
+  padding: 5% 10%;
+}
+
+.photo-carousel-wrapper{
+  border: 20px solid #504F58;
+  padding: 5px 5px 0px 5px;
+  max-width: 900px;
+}
+
+.photography-text{
+  max-width: 900px;
+  margin-top: 5%;
+}
+
+
+/* ============================================================
+  FOOTER
+============================================================ */
+footer{
+  background-color: #313131;
+  color: #BD8C8C;
+  padding: 3px;
+}
+
+footer span{
+  font-size: 0.7em;
 }
 
 
