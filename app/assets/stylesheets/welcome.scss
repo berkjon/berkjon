@@ -18,9 +18,13 @@ $bhtm_font_color: rgba(167, 16, 119, 1);
 /*$bhtm_font_color: rgba(250, 240, 248, 1);*/
 $bhtm_details_bg_color: rgba(250, 240, 248, 0.9);
 /*$bhtm_details_bg_color: rgba(157, 94, 137, 0.9);*/
+$ninety8problems_bg_color: rgba(68, 177, 103, 1);
+$ninety8problems_font_color: rgba(189, 189, 189, 1);
+$ninety8problems_details_bg_color: rgba(23, 23, 23, 0.9);
 $shelfworm_bg_color: rgba(255, 241, 196, 1);
-$shelfworm_font_color: rgba(120, 192, 168, 1);
-$shelfworm_details_bg_color: rgba(94, 65, 47, 0.9);
+$shelfworm_font_color: rgba(196, 252, 255, 1);
+$shelfworm_details_bg_color: rgba(94, 65, 47, 0.95);
+
 
 
 /* FONTS */
@@ -351,11 +355,38 @@ span.header-tagline{
 }
 
 
+#ninety8problems{
+  background-image: image-url("98problems-laptop-border.png");
+  background-color: $ninety8problems_bg_color;
+  color: $ninety8problems_font_color;
+}
+
+#ninety8problems .project-details{
+  background-color: $ninety8problems_details_bg_color;
+}
+
+#ninety8problems hr{
+  border-color: $ninety8problems_bg_color;
+}
+
+#ninety8problems .project-links a::before, #ninety8problems .project-links a::after{
+  background: $ninety8problems_bg_color;
+}
+
+#ninety8problems .mobile-project-header, #ninety8problems .mobile-project-header hr, #ninety8problems .mobile-project-links{
+  color: $ninety8problems_details_bg_color;
+  border-color: $ninety8problems_details_bg_color;
+}
+
+#ninety8problems .mobile-project-links a::before, #ninety8problems .mobile-project-links a::after{
+  background: $ninety8problems_font_color;
+}
+
+
 
 #shelfworm{
   background-image: image-url("shelfworm-laptop-border.png");
   background-color: $shelfworm_bg_color;
-  /*color: $shelfworm_font_color;*/
   color: $shelfworm_font_color;
 }
 
@@ -401,7 +432,7 @@ span.header-tagline{
 .mobile-project-links{
   position: absolute;
   bottom: 5%;
-  width: 400px;
+  width: 420px;
   left: 0;
   right: 0;
   margin: auto;
