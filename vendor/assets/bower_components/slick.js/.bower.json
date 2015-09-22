@@ -36,7 +36,6 @@
     "commit": "66a9ee8f01a0d8e56f959b17ce70ed1a27ebfdee"
   },
   "_source": "git://github.com/kenwheeler/slick.git",
-  "_target": "~1.5.8",
-  "_originalSource": "slick.js",
-  "_direct": true
+  "_target": "~1.5.5",
+  "_originalSource": "slick.js"
 }

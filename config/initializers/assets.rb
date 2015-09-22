@@ -9,3 +9,7 @@ Rails.application.config.assets.version = '1.0'
 # Precompile additional assets.
 # application.js, application.css, and all non-JS/CSS in app/assets folder are already added.
 # Rails.application.config.assets.precompile += %w( search.js )
+
+#Persuading Rails to serve all Bower assets, via bower-rails gem
+types = %w( *.png *.gif *.jpg *.eot *.woff *.ttf )
+Rails.application.config.assets.precompile += types

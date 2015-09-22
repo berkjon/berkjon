@@ -14,10 +14,7 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
-//= require ScrollMagic/scrollmagic/uncompressed/ScrollMagic
-//= require ScrollMagic/scrollmagic/minified/plugins/debug.addIndicators.min
-
-//= require slick.js/slick/slick.min
+//= require slick.js/slick/slick
 
 
   // init controller

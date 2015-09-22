@@ -2,7 +2,7 @@
 /* Slider */
 .slick-loading .slick-list
 {
-    background: #fff url('./ajax-loader.gif') center center no-repeat;
+    background: #fff url(<%= asset_path 'slick.js/slick/ajax-loader.gif' %>) center center no-repeat;
 }
 
 /* Icons */
@@ -12,8 +12,8 @@
     font-weight: normal;
     font-style: normal;
 
-    src: url('./fonts/slick.eot');
-    src: url('./fonts/slick.eot?#iefix') format('embedded-opentype'), url('./fonts/slick.woff') format('woff'), url('./fonts/slick.ttf') format('truetype'), url('./fonts/slick.svg#slick') format('svg');
+    src: url(<%= asset_path 'slick.js/slick/fonts/slick.eot' %>);
+    src: url(<%= asset_path 'slick.js/slick/fonts/slick.eot?#iefix' %>) format('embedded-opentype'), url(<%= asset_path 'slick.js/slick/fonts/slick.woff' %>) format('woff'), url(<%= asset_path 'slick.js/slick/fonts/slick.ttf' %>) format('truetype'), url(<%= asset_path 'slick.js/slick/fonts/slick.svg#slick' %>) format('svg');
 }
 /* Arrows */
 .slick-prev,
@@ -38,8 +38,6 @@
     border: none;
     outline: none;
     background: transparent;
-
-    z-index: 1; /*Added to prevent 500px script from covering this up*/
 }
 .slick-prev:hover,
 .slick-prev:focus,
@@ -79,7 +77,7 @@
 
 .slick-prev
 {
-    left: 25px;
+    left: -25px;
 }
 [dir='rtl'] .slick-prev
 {
@@ -97,7 +95,7 @@
 
 .slick-next
 {
-    right: 25px;
+    right: -25px;
 }
 [dir='rtl'] .slick-next
 {
@@ -116,13 +114,13 @@
 /* Dots */
 .slick-slider
 {
-    /*margin-bottom: 30px;*/
+    margin-bottom: 30px;
 }
 
 .slick-dots
 {
     position: absolute;
-    bottom: 10px;
+    bottom: -45px;
 
     display: block;
 
