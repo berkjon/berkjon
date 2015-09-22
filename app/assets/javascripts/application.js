@@ -14,44 +14,8 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
-//= require ScrollMagic/scrollmagic/uncompressed/ScrollMagic
-//= require ScrollMagic/scrollmagic/minified/plugins/debug.addIndicators.min
+//= require slick.js/slick/slick
 
-//= require slick.js/slick/slick.min
-
-
-  // init controller
-  var controller = new ScrollMagic.Controller();
-
-    $(function () { // wait for document ready
-    // build scene
-    var scene = new ScrollMagic.Scene({
-      triggerElement: 'nav',
-      triggerHook: 0, // don't trigger until #pinned-trigger1 hits the top of the viewport
-      duration: 0,
-      reverse: true // allows the effect to trigger when scrolled in the reverse direction
-    })
-    .setPin("nav")
-            // .addIndicators({name: "2 (duration: 0)"}) // add indicators (requires plugin)
-            .addTo(controller);
-          });
-
-// $(document).ready(function() {
-
-//   $(window).scroll(function () {
-//     // viewportHeight = $(window).height();
-//     // navbarHeight = $('nav').height();
-//     var navOffsetTop = $('nav').offset().top
-
-//     if ($(window).scrollTop() > navOffsetTop) {
-//       $('nav').addClass('fixed-top');
-//     }
-//     console.log(navOffsetTop);
-//     if ($(window).scrollTop() < navOffsetTop) {
-//       $('nav').removeClass('fixed-top');
-//     }
-//   });
-// });
 
 //SLICK CAROUSEL:
 $(document).ready(function(){
