@@ -739,6 +739,22 @@ span.first-letter{
   background-color: black;
 }
 
+.photography-content .slick-slider{
+  margin-bottom: 0px;
+}
+
+.photography-content .slick-prev{
+  left: 10px;
+  z-index: 1;
+}
+
+.photography-content .slick-next{
+  right: 10px;
+}
+
+.photography-content .slick-prev:before, .photography-content .slick-next:before{
+  opacity: 0.6;
+}
 
 /* ============================================================
   FOOTER
