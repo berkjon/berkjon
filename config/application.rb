@@ -31,5 +31,11 @@ module Berkjon
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
+
+    # Include Bower components in compiled assets
+    config.assets.paths << Rails.root.join('vendor', 'assets', 'bower_components')
+
+    # Include custom downloaded fonts (non-Google)
+    config.assets.paths << Rails.root.join('/app/assets/fonts')
   end
 end

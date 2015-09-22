@@ -12,7 +12,10 @@
  *
  *= require reset
  *= require responsive.gs.12col
- *= require font-awesome.min
+ *= require slick.js/slick/slick
+ *= require slick.js/slick/slick-theme
  *= require_tree .
  *= require_self
  */
+
+
