@@ -18,12 +18,12 @@ $bhtm_font_color: rgba(167, 16, 119, 1);
 /*$bhtm_font_color: rgba(250, 240, 248, 1);*/
 $bhtm_details_bg_color: rgba(250, 240, 248, 0.9);
 /*$bhtm_details_bg_color: rgba(157, 94, 137, 0.9);*/
-$ninety8problems_bg_color: rgba(68, 177, 103, 1);
+$ninety8problems_bg_color: rgba(70, 193, 110, 1);
 $ninety8problems_font_color: rgba(189, 189, 189, 1);
-$ninety8problems_details_bg_color: rgba(23, 23, 23, 0.9);
+$ninety8problems_details_bg_color: rgba(23, 23, 23, 0.85);
 $shelfworm_bg_color: rgba(255, 241, 196, 1);
 $shelfworm_font_color: rgba(196, 252, 255, 1);
-$shelfworm_details_bg_color: rgba(94, 65, 47, 0.95);
+$shelfworm_details_bg_color: rgba(94, 65, 47, 0.92);
 $photography_bg_color: rgb(214, 215, 224);
 
 
@@ -80,10 +80,10 @@ em{
   font-weight: bold;
 }
 
-.header-wrapper{
+.cover-wrapper{
   text-align: center;
   position: relative;
-  top: 5%;
+  top: 3%;
   /*transform: translateY(-50%);*/
 }
 
@@ -107,7 +107,7 @@ hr.flared-edges::before {
   display: block;
   content: "";
   height: 30px;
-  margin-top: -31px;
+  margin-top: -32px;
   border-style: solid;
   border-color: inherit;
   border-width: 0 0 1px 0;
@@ -128,6 +128,7 @@ header nav {
   display: block;
   /*margin: 1em 5em;*/
   overflow: hidden;
+  display: none;
 }
 header nav ul {
   margin: 0;
@@ -173,8 +174,10 @@ header nav > ul > li:hover > a > .caret {
   DIAMONDS
 ============================================================ */
 .diamond-grid {
-    width: 385px;
-    height:225px;
+    /*width: 385px;*/
+    /*height:225px;*/
+    width: 293px;
+    height:175px;
     margin: 0 auto;
     box-sizing: content-box;
 }
@@ -182,20 +185,26 @@ header nav > ul > li:hover > a > .caret {
 ul.diamond-grid li {
     /*list-style: none;*/
     float: left;
-    margin-left: 32px;
+    /*margin-left: 32px;*/
+    margin-left: 24px;
 }
 
 .diamond {
-    height: 80px;
-    width: 80px;
-    background: $nav_background_color;
+/*    height: 80px;
+    width: 80px;*/
+    height: 60px;
+    width: 60px;
+/*    background: $nav_background_color;
     opacity: 0.4;
     color: $nav_font_color;
+    border: 3px solid $nav_border_color;*/
+    border: 3px solid rgba(130, 130, 130, 0.85);
+    background-color: rgba(255, 255, 255, 0.4);
+    color: rgba(0, 0, 0, 0.5);
     display: block;
     overflow: hidden;
     position: relative;
     text-decoration: none;
-    border: 3px solid $nav_border_color;
     -webkit-transform: rotate(45deg);
     -moz-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
@@ -205,12 +214,19 @@ ul.diamond-grid li {
     -moz-transition: color .35s linear;
     -o-transition: color .35s linear;
     transition: color .35s linear;
+    -webkit-transition: background-color .35s linear;
+    -moz-transition: background-color .35s linear;
+    -o-transition: background-color .35s linear;
+    transition: background-color .35s linear;
 }
 
 .diamond-text {
-    height: 80px;
-    width: 80px;
-    font-size: 44px;
+/*    height: 80px;
+    width: 80px;*/
+    /*font-size: 44px;*/
+    height: 60px;
+    width: 60px;
+    font-size: 34px;
     padding: 0 10px;
     display: table-cell;
     vertical-align: middle;
@@ -223,15 +239,19 @@ ul.diamond-grid li {
 }
 
 .diamond-grid > li:nth-child(4) {
-    margin-left: 91px;
+    /*margin-left: 91px;*/
+    margin-left: 69px;
 }
 .diamond-grid > li:nth-child(n+4){
-    margin-top: -27px;
+    /*margin-top: -27px;*/
+    margin-top: -22px;
 }
 .diamond:hover {
-    opacity: 0.9;
+    /*opacity: 0.9;*/
     color: $link_hover_color;
     border-color: $link_hover_color;
+    background-color: rgba(0, 0, 0, 0.55);
+    z-index: 1;
 }
 
 /* ============================================================
@@ -242,6 +262,200 @@ ul.diamond-grid li {
   padding: 1% 3%;*/
 }
 
+.header-wrapper{
+  margin: 0 auto;
+  text-align: center;
+  position: absolute;
+  bottom: 1.5em;
+  right: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.6);
+  color: rgba(0, 0, 0, 0.8);
+  width: 266px;
+}
+
+.header-wrapper h4{
+  margin-top: 8px;
+  font-family: "Cinzel", serif;
+  font-size: 1.1em;
+  text-align: center;
+}
+
+.header-wrapper h5{
+  font-family: "Bad Script", cursive;
+  text-align: center;
+}
+
+span.welcome-tagline:before, span.welcome-tagline:after{
+  content:"";
+  vertical-align:top;
+  display:inline-block;
+  width: 19%;
+  height: 1em;
+  border-bottom:1px solid black;
+  margin:0 4% 0 -55%;
+}
+
+span.welcome-tagline:after{
+  margin:0 -55% 0 4%;
+}
+
+span.welcome-tagline{
+}
+
+h1.name-header{
+  /*font-family: "Roboto Slab", sans-serif;*/
+  font-family: "Oswald", sans-serif;
+    font-size: 2.3em;
+  font-weight: bold;
+  text-align: center;
+  margin-top: -3px;
+}
+
+a.down-arrows{
+  text-decoration: none;
+  position: absolute;
+  margin: 0 auto;
+  bottom: -4px;
+  left: 0;
+  right: 0;
+  color: rgba(255, 255, 255, 0.4);
+  width: 20px;
+}
+
+a.down-arrows:hover{
+  color: rgb(255, 255, 255);
+}
+
+.about-content{
+  padding: 5% 10%;
+  background: #fcfaf2;
+  color: #333;
+}
+
+.quote{
+  margin: 0 auto;
+  width: 474px;
+  margin-bottom: 5%;
+  padding: 0 20px;
+}
+
+.about-content .quote h3{
+  font-family: "Vollkorn", serif;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 1.3em;
+  line-height: 30px;
+  text-indent: -6px;
+  margin: 0 0 10px 0;
+}
+
+.about-content .quote p{
+  font-family: "Vollkorn", serif;
+  color: #ba1820;
+  font-size: 0.8em;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-indent: -13px;
+  line-height: 18px;
+}
+
+.about-content .separator{
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.about-content hr{
+  border-color: #ba1820;
+}
+
+.about-content .header{
+  margin-top: 2%;
+  margin-bottom: 3%;
+}
+
+.about-content .header h3{
+  font-family: "Josefin Slab", serif;
+  font-weight: 600;
+  font-size: 1.7em;
+  text-align: center;
+  letter-spacing: 1px;
+  margin-bottom: -3px;
+}
+
+.about-content .header h3 span{
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+}
+
+.about-content .header span{
+  font-family: "Bad Script", cursive;
+  font-size: 0.8em;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.info-cards-wrapper{
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.info-card{
+  padding: 0.5em;
+  border-radius: 1em;
+  min-width: 262px;
+}
+
+.info-card-header{
+  /*margin-bottom: 10px;*/
+}
+
+.info-card ul{
+  margin-left: 0.5em;
+}
+
+.info-card a{
+  text-decoration: none;
+  font-size: 0.8em;
+  color: inherit;
+}
+
+.info-card a:hover{
+  color: #ba1820;
+}
+
+.info-card h4{
+  border-top: 3px solid #ba1820;
+  font-family: "Cinzel", serif;
+  font-size: 1.4em;
+  margin-top: 4px;
+  color: black;
+}
+
+.info-card h4 span{
+  background: #fcfaf2;
+  position: relative;
+  top: -11px;
+  padding: 0 6px 0 0;
+}
+
+.info-card .card-tagline{
+  font-family: "Lato", cursive;
+  font-weight: 200;
+  font-style: italic;
+  font-size: 0.9em;
+  float: right;
+  margin-top: -26px;
+}
+
+.info-card li:before{
+  font-family: FontAwesome;
+  content: "\f105";
+  padding-right: 4px;
+  /*vertical-align: middle;*/
+  display: inline-block;
+}
+
 #about .parallax{
   /*border-radius: 2em;*/
 }
@@ -250,26 +464,8 @@ span.first-letter{
   font-size: 1.7em;
 }
 
-#about header h2{
-  /*border-top: 1px solid $header_tagline_color;*/
-  font-size: inherit;
-}
-
-span.header-tagline{
-  /*font-family: 'Ceviche One', cursive;*/
-  /*font-family: 'Permanent Marker', cursive;*/
-  font-family: 'Nothing You Could Do', cursive;
-  font-size: 40px;
-  color: $header_tagline_color;
-}
-
 .text-box{
   border: 1px solid blue;
-}
-
-#bobs-image{
-  width: 100%;
-  max-width: 400px;
 }
 
 .center{
@@ -277,15 +473,6 @@ span.header-tagline{
   margin: 0 auto;
 }
 
-.social-links li{
-  display: inline-block;
-  font-size: 28px;
-  padding: 0px 10px;
-}
-
-.emoji{
-  max-width: 24px;
-}
 
 /* ============================================================
   SECTIONS -- PROJECTS
@@ -297,14 +484,15 @@ span.header-tagline{
 #projects .parallax{
 }
 
-#projects h2{
-  font-family: 'Cabin Sketch', cursive;
-  font-size: 4em;
+#projects h2 span{
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 1% 2%;
+  color: rgba(0, 0, 0, 0.8);
 }
 
-@media all and (min-width: 650px) {
-  #projects h2 {
-    font-size: 8em;
+@media all and (min-width: 768px) {
+  #projects h2, #photography h2 {
+    font-size: 4.5em;
   }
 }
 
@@ -393,7 +581,6 @@ span.header-tagline{
 }
 
 #shelfworm .project-details{
-  /*background-color: $shelfworm_details_bg_color;*/
   background-color: $shelfworm_details_bg_color;
 }
 
@@ -524,8 +711,14 @@ span.header-tagline{
 
 
 /* ============================================================
-  PHOTOGRAPHY
+  SECTION -- PHOTOGRAPHY
 ============================================================ */
+#photography h2 span{
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 1% 2%;
+  color: rgba(0, 0, 0, 0.8);
+}
+
 .photography-content{
   background-color: $photography_bg_color;
   padding: 5% 10%;
@@ -540,6 +733,10 @@ span.header-tagline{
 .photography-text{
   max-width: 900px;
   margin-top: 5%;
+}
+
+.photo-journals{
+  background-color: black;
 }
 
 
@@ -564,11 +761,6 @@ footer span{
 .module:last-child {
   margin-bottom: 0;
 }
-.module h2 {
-  margin-bottom: 40px;
-  font-family: "Roboto Slab", serif;
-  font-size: 30px;
-}
 .module p {
   font-size: 16px;
   font-weight: 300;
@@ -585,20 +777,20 @@ footer span{
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-  border-top: 16px solid $section_divider_border_color;
-  border-bottom: 16px solid $section_divider_border_color;
 }
-.module.parallax h1 {
+/*.module.parallax h1 {
   font-family: 'Amatic SC', cursive;
   color: rgba(255, 255, 255, 0.8);
   font-size: 3em;
   font-weight: 700;
   text-align: center;
   text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-}
+}*/
 .module.parallax h2 {
+  font-family: 'Raleway', serif;
+  font-weight: bold;
   color: rgba(255, 255, 255, 0.8);
-  font-size: 5em;
+  font-size: 2.8em;
   font-weight: 700;
   text-align: center;
   text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
@@ -606,14 +798,20 @@ footer span{
 .module.parallax-1 {
   background-image: image-url("kvalvika_beach_1mb.jpg");
   height: 100vh;
+/*  border-top: 16px solid rgba(0, 0, 0, 0.35);
+  border-bottom: 16px solid rgba(0, 0, 0, 0.35);*/
 }
 .module.parallax-2 {
   background-image: image-url("programming_1600x600.jpg");
   height: 300px;
+  border-top: 16px solid rgba(255, 255, 255, 0.7);
+  border-bottom: 16px solid rgba(255, 255, 255, 0.7);
 }
 .module.parallax-3 {
   background-image: image-url("photography_1600x600.jpg");
   height: 300px;
+  border-top: 16px solid rgba(0, 0, 0, 0.35);
+  border-bottom: 16px solid rgba(0, 0, 0, 0.35);
 }
 
 @media all and (min-width: 600px) {
@@ -623,17 +821,17 @@ footer span{
   .module p {
     font-size: 20px;
   }
-  .module.parallax h1 {
+/*  .module.parallax h1 {
     font-size: 4.5em;
-  }
+  }*/
   .project-details p{
     font-size: 16px;
   }
 }
 @media all and (min-width: 960px) {
-  .module.parallax h1 {
+/*  .module.parallax h1 {
     font-size: 6em;
-  }
+  }*/
 }
 
 /*---------------------------------*/

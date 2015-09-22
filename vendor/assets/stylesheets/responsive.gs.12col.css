@@ -93,3 +93,13 @@
 	.gutters .span_11 { width: 91.5%; }
 	.gutters .span_12 { width: 100%; }
 }
+
+@media ( max-width : 1090px ) {
+	.gutters .info-card.span_4 {
+		width: 370px;
+		margin: 0 auto;
+	}
+	.info-card.col{
+		float: none;
+	}
+}

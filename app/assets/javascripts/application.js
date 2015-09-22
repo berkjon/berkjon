@@ -31,10 +31,10 @@
       duration: 0,
       reverse: true // allows the effect to trigger when scrolled in the reverse direction
     })
-            .setPin("nav")
+    .setPin("nav")
             // .addIndicators({name: "2 (duration: 0)"}) // add indicators (requires plugin)
             .addTo(controller);
-  });
+          });
 
 // $(document).ready(function() {
 
@@ -63,5 +63,21 @@ $(document).ready(function(){
     autoplaySpeed: 6000,
     speed: 1000,
     accessibility: true,
+  });
+});
+
+//SMOOTH SCROLLING:
+$(document).ready(function(){
+  $('a[href*=#]:not([href=#])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') || location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html,body').animate({
+          scrollTop: target.offset().top
+        }, 1000);
+      return false;
+      }
+    }
   });
 });
