@@ -91,7 +91,8 @@ em{
   text-align: center;
   position: relative;
   top: 50%;
-  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 
 
@@ -125,7 +126,7 @@ header nav {
   /*border-radius: 14px;*/
   box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.055);
   color: $nav_font_color;
-  display: block;
+  /*display: block;*/
   /*margin: 1em 5em;*/
   overflow: hidden;
   display: none;
@@ -138,10 +139,6 @@ header nav ul {
 header nav ul li {
   display: inline-block;
   list-style-type: none;
-  -webkit-transition: all 0.2s;
-  -moz-transition: all 0.2s;
-  -ms-transition: all 0.2s;
-  -o-transition: all 0.2s;
   transition: all 0.2s;
 }
 header nav > ul > li > a {
@@ -206,17 +203,8 @@ ul.diamond-grid li {
     position: relative;
     text-decoration: none;
     -webkit-transform: rotate(45deg);
-    -moz-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    -o-transform: rotate(45deg);
     transform: rotate(45deg);
-    -webkit-transition: color .35s linear;
-    -moz-transition: color .35s linear;
-    -o-transition: color .35s linear;
     transition: color .35s linear;
-    -webkit-transition: background-color .35s linear;
-    -moz-transition: background-color .35s linear;
-    -o-transition: background-color .35s linear;
     transition: background-color .35s linear;
 }
 
@@ -231,9 +219,6 @@ ul.diamond-grid li {
     display: table-cell;
     vertical-align: middle;
     -webkit-transform: rotate(-45deg);
-    -moz-transform: rotate(-45deg);
-    -ms-transform: rotate(-45deg);
-    -o-transform: rotate(-45deg);
     transform: rotate(-45deg);
     text-align: center;
 }
@@ -655,18 +640,15 @@ span.first-letter{
   height: 3px;
   background: white;
   content: '';
-  -webkit-transition: -webkit-transform 0.3s;
-  -moz-transition: -moz-transform 0.3s;
+  transition: -webkit-transform 0.3s;
   transition: transform 0.3s;
   -webkit-transform: scale(0.85);
-  -moz-transform: scale(0.85);
   transform: scale(0.85);
 }
 
 .project-links a::after {
   opacity: 0;
-  -webkit-transition: top 0.3s, opacity 0.3s, -webkit-transform 0.3s;
-  -moz-transition: top 0.3s, opacity 0.3s, -moz-transform 0.3s;
+  transition: top 0.3s, opacity 0.3s, -webkit-transform 0.3s;
   transition: top 0.3s, opacity 0.3s, transform 0.3s;
 }
 
@@ -675,7 +657,6 @@ span.first-letter{
 .project-links a:focus::before,
 .project-links a:focus::after {
   -webkit-transform: scale(1);
-  -moz-transform: scale(1);
   transform: scale(1);
 }
 
@@ -898,7 +879,6 @@ footer span{
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   -webkit-transform-style: preserve-3d;
-  -moz-transform-style: preserve-3d;
   transform-style: preserve-3d;
 }
 
@@ -959,11 +939,10 @@ figure.effect-lexi {
 
 figure.effect-lexi img {
   margin: -10px 0 0 -10px;
-  width: -webkit-calc(100% + 10px);
   width: calc(100% + 10px);
   max-width: 500px;
   opacity: 0.9;
-  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, -webkit-transform 0.35s;
   transition: opacity 0.35s, transform 0.35s;
   -webkit-transform: translate3d(10px,10px,0);
   transform: translate3d(10px,10px,0);
@@ -973,7 +952,7 @@ figure.effect-lexi img {
 
 figure.effect-lexi figcaption::before,
 figure.effect-lexi p {
-  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, -webkit-transform 0.35s;
   transition: opacity 0.35s, transform 0.35s;
 }
 
@@ -1008,12 +987,14 @@ figure.effect-lexi h3 {
   font-family: 'Lobster', cursive;
   text-align: center;
   font-size: 36px;
-  -webkit-transition: -webkit-transform 0.35s;
+  transition: -webkit-transform 0.35s;
   transition: transform 0.35s;
 /*  -webkit-transform: translate3d(0,0,0);
   transform: translate3d(0,0,0);*/
-  transform: scale3d(1,1,1) translateY(-50%);
-  transform-origin: -20% -10%;
+  -webkit-transform: scale3d(1,1,1) translateY(-50%);
+          transform: scale3d(1,1,1) translateY(-50%);
+  -webkit-transform-origin: -20% -10%;
+          transform-origin: -20% -10%;
 }
 
 figure.effect-lexi p {
@@ -1037,7 +1018,8 @@ figure.effect-lexi:hover figcaption::before {
 figure.effect-lexi:hover h3{
   /*font-size: 24px;*/
   opacity: 1;
-  transform: scale3d(0.8,0.8,1) translateY(-100%);
+  -webkit-transform: scale3d(0.8,0.8,1) translateY(-100%);
+          transform: scale3d(0.8,0.8,1) translateY(-100%);
 /*  -webkit-transform: translate3d(20px,20px,0);
   transform: translate3d(20px,20px,0);*/
 }
