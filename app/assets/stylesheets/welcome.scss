@@ -320,7 +320,7 @@ a.down-arrows:hover{
 
 .quote{
   margin: 0 auto;
-  width: 474px;
+  width: 478px;
   margin-bottom: 5%;
   padding: 0 20px;
 }
@@ -503,9 +503,14 @@ span.first-letter{
 }
 
 #bhtm{
-  background-image: image-url("bhtm-laptop-border.png");
-  background-color: $bhtm_bg_color;
+  background: url("bhtm-laptop-border.png") $bhtm_bg_color;
   color: $bhtm_font_color;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: 70%;
+  background-attachment: fixed;
+  position: static;
+  transition: 1s ease-in-out;
 }
 
 #bhtm .project-details{
@@ -531,9 +536,14 @@ span.first-letter{
 
 
 #ninety8problems{
-  background-image: image-url("98problems-laptop-border.png");
-  background-color: $ninety8problems_bg_color;
+  background: url("98problems-laptop-border.png") $ninety8problems_bg_color;
   color: $ninety8problems_font_color;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: 70%;
+  background-attachment: fixed;
+  position: static;
+  transition: 1s ease-in-out;
 }
 
 #ninety8problems .project-details{
@@ -560,9 +570,14 @@ span.first-letter{
 
 
 #shelfworm{
-  background-image: image-url("shelfworm-laptop-border.png");
-  background-color: $shelfworm_bg_color;
+  background: url("shelfworm-laptop-border.png") $shelfworm_bg_color;
   color: $shelfworm_font_color;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: 70%;
+  background-attachment: fixed;
+  position: static;
+  transition: 1s ease-in-out;
 }
 
 #shelfworm .project-details{
